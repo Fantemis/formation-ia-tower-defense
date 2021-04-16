@@ -17,9 +17,14 @@ var parent
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print_debug("ok heal")
+	parent = get_node("..")
+	var collision_shape = CollisionShape2D.new()
 	var shape = CircleShape2D.new()
 	shape.radius = radius
-	parent = get_node("..")
+	collision_shape.set_shape(shape)
+	add_child(collision_shape)
+	
+	
 	var timer = Timer.new()
 	add_child(timer)
 	timer.start(1 / attack_speed)
