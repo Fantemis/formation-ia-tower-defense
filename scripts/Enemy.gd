@@ -31,7 +31,13 @@ func take_damage(amount):
 		queue_free()
 		var main = get_node("/root/Main")
 		# on donne la récompense au joueur pour avoir tué un ennemi
-		main.money += reward
+		main.money += reward		
+		
+func take_heal(amount):
+	if (amount + hitpoints) > 100:
+		print_debug("déjà full life")
+	else:
+		hitpoints += amount
 		
 func _exit_tree():
 	world.remove_enemy(self)
