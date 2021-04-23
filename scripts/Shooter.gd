@@ -30,9 +30,12 @@ func shoot():
 	if !target:
 		var overlapping = get_overlapping_areas()
 		for obj in overlapping:
-			#print_debug(obj)
-			target = obj
-			break
+			if obj.has_method("isHealer"):
+				continue
+			else:
+				#print_debug(obj)
+				target = obj
+				break
 	if target:
 		var bullet = projectile.instance()
 		# ajouter une var parent 
