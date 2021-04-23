@@ -14,8 +14,7 @@ collision_layer = 2147483652
 collision_mask = 2
 script = ExtResource( 1 )
 speed = 35.0
-max_health = 500
-hitpoints = 500.0
+hitpoints = 100.0
 dijkstra = "avoid_range_go_to_base"
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -33,8 +32,8 @@ collision_layer = 0
 collision_mask = 10
 script = ExtResource( 4 )
 attack_range = 150.0
-attack_speed = 3.0
+attack_speed = 0.5
 projectile = ExtResource( 3 )
 
 [node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
-position = Vector2( 9.84445, 6.98268 )
+position = Vector2( 10.1096, 5.21491 )

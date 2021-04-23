@@ -17,8 +17,8 @@ var parent
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	collision_layer = 0b10
-	collision_mask = 0
+	#collision_layer = 0b10
+	#collision_mask = 0
 	
 	print_debug("ok heal")
 	parent = get_node("..")
@@ -50,7 +50,9 @@ func heal():
 		for obj in overlapping:
 			print_debug("list")
 			print_debug(obj)
-			if obj.has_method("isHealer"):
+			print_debug(obj.get_node("Shooter"))
+			if obj == parent:
+			#if obj.get_node("Shooter").has_method("isHealer"):
 				continue
 			else:
 				print_debug("heal")

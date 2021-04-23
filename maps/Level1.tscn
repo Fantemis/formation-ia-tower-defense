@@ -49,4 +49,4 @@ waves = [ {
 "enemies": [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
 "wait": 30.0
 } ]
-interval = 4.0
+interval = 5.0

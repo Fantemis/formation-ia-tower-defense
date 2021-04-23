@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://sprites/barHorizontal_green.png" type="Texture" id=1]
+[ext_resource path="res://sprites/bar_green.png" type="Texture" id=1]
 [ext_resource path="res://scripts/HealthDisplay.gd" type="Script" id=2]
-[ext_resource path="res://sprites/energy_bar_bg.png" type="Texture" id=3]
+[ext_resource path="res://sprites/bar_bg.png" type="Texture" id=3]
 
 [node name="HealthDisplay" type="Node2D"]
-scale = Vector2( 0.18, 0.25 )
+scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 2 )
 
 [node name="HealthBar" type="TextureProgress" parent="."]
