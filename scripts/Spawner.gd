@@ -2,7 +2,7 @@ extends Node2D
 class_name Spawner
 
 export var waves = []
-export (float) var interval = 5
+export (float) var interval = 1
 var wave_index = 0
 var spawn_index = 0
 var wave_timer: Timer
