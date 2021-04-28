@@ -4,18 +4,21 @@
 [ext_resource path="res://scripts/Projectile.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2.2253, 4.49861 )
+extents = Vector2( 6.87245, 7.6003 )
 
-[node name="Bullet" type="Area2D"]
+[node name="Missile" type="Area2D"]
 script = ExtResource( 2 )
-damage = 25.0
-speed = 500.0
-duration = 5.0
+damage = 60.0
+speed = 120.0
+duration = 10.0
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 10.929, 8.92675 )
+scale = Vector2( 1.00927, 1.03129 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 808, 236, 4, 9 )
+region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 11.3461, 8.84332 )
 shape = SubResource( 1 )

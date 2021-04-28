@@ -9,6 +9,7 @@
 [ext_resource path="res://scripts/MoneyUI.gd" type="Script" id=7]
 [ext_resource path="res://scripts/DebugDrawing.gd" type="Script" id=8]
 [ext_resource path="res://entities/Buildings/Land_Mine.tscn" type="PackedScene" id=9]
+[ext_resource path="res://entities/Buildings/UltraDefense.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scripts/UI.gd" type="Script" id=11]
 
 [node name="Main" type="Node2D"]
@@ -24,6 +25,10 @@ towers = [ {
 }, {
 "cost": 50,
 "name": "Mine",
+"scene": ExtResource( 9 )
+}, {
+"cost": 500,
+"name": "Ultra tourelle",
 "scene": ExtResource( 9 )
 } ]
 map = ExtResource( 1 )

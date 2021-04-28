@@ -1,9 +1,10 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/M484VerticalShmupSet1-29x29.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Enemy.gd" type="Script" id=2]
 [ext_resource path="res://entities/Projectiles/Missile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Shooter.gd" type="Script" id=4]
+[ext_resource path="res://HealthBar.tscn" type="PackedScene" id=5]
 [ext_resource path="res://sprites/fire_02.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -381,3 +382,6 @@ speed_scale = 3.0
 playing = true
 offset = Vector2( -20.4077, 1.15342 )
 flip_v = true
+
+[node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9.79989, 4.00904 )

@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/M484VerticalShmupSet1-29x29.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Projectile.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.1035, 15.5359 )
+
+[node name="Missile" type="Area2D"]
+script = ExtResource( 2 )
+damage = 500.0
+speed = 120.0
+duration = 100.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 10.929, 9.95683 )
+scale = Vector2( 1.00927, 0.90253 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 10.929, 31.2141 )
+scale = Vector2( 1.00927, 1.03129 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 2.40746, 19.2153 )
+rotation = 1.57705
+scale = Vector2( 1.00927, 1.2771 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 20.0989, 19.6207 )
+rotation = 1.58322
+scale = Vector2( 1.00927, 1.21769 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 11.1588, 21.2044 )
+shape = SubResource( 1 )
