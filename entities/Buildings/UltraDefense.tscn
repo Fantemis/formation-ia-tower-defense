@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/M484VerticalShmupSet1-29x29.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Tower.gd" type="Script" id=2]
+[ext_resource path="res://entities/Projectiles/UltraLaser.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/Shooter.gd" type="Script" id=4]
+[ext_resource path="res://HealthBar.tscn" type="PackedScene" id=5]
+
+[node name="Tower" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 2 )
+hitpoints = 150.0
+tag = "tower"
+max_health = 150
+
+[node name="Top" type="Sprite" parent="."]
+position = Vector2( 17.0198, -10.0794 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 4.97987, 347.722, 22.771, 19.1596 )
+
+[node name="Top3" type="Sprite" parent="."]
+position = Vector2( 37.1786, 8.18948 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 63.847, 343.169, 22.2639, 22.6412 )
+
+[node name="Top2" type="Sprite" parent="."]
+position = Vector2( 15.1299, 30.8681 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 126, 340, 29, 29 )
+
+[node name="Top4" type="Sprite" parent="."]
+position = Vector2( 38.1235, -10.3943 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 34.7908, 345.811, 21.8865, 19.245 )
+
+[node name="Top5" type="Sprite" parent="."]
+position = Vector2( -6.2887, 30.2381 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 159.318, 344.302, 24.9053, 18.113 )
+
+[node name="Top6" type="Sprite" parent="."]
+position = Vector2( 38.4385, 30.2381 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 95.9221, 344.679, 23.0186, 18.4903 )
+
+[node name="Top7" type="Sprite" parent="."]
+position = Vector2( -5.34377, -6.92957 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 220.826, 346.566, 24.9053, 19.9997 )
+
+[node name="Top8" type="Sprite" parent="."]
+position = Vector2( -6.28871, 10.7093 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 193.279, 345.056, 19.9998, 21.5092 )
+
+[node name="Top9" type="Sprite" parent="."]
+position = Vector2( 16.7048, 10.0794 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 129.884, 316.377, 19.6224, 19.6224 )
+
+[node name="Shooter" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 36
+script = ExtResource( 4 )
+attack_range = 300.0
+attack_speed = 2.0
+projectile = ExtResource( 3 )
+
+[node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10.7448, -19.8792 )

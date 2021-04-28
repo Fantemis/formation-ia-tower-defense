@@ -15,9 +15,10 @@ collision_layer = 32
 collision_mask = 4
 script = ExtResource( 2 )
 speed = 30.0
-max_health = 500
+max_health = 250
 hitpoints = 500.0
 dijkstra = "distance_to_base"
+reward = 60
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.2, 0.2 )
