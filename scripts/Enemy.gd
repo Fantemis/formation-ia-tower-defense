@@ -33,6 +33,7 @@ func take_damage(amount):
 	print(hitpoints)
 	if (hitpoints - amount) >= max_health:
 		hitpoints = max_health
+		$HealthDisplay.update_healthbar(hitpoints)
 		print_debug("déjà full life")
 	else:
 		hitpoints -= amount
