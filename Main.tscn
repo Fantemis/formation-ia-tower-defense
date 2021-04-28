@@ -8,6 +8,7 @@
 [ext_resource path="res://sprites/barrel.tres" type="Texture" id=6]
 [ext_resource path="res://scripts/MoneyUI.gd" type="Script" id=7]
 [ext_resource path="res://scripts/DebugDrawing.gd" type="Script" id=8]
+[ext_resource path="res://entities/Buildings/Land_Mine.tscn" type="PackedScene" id=9]
 [ext_resource path="res://entities/Buildings/UltraDefense.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scripts/UI.gd" type="Script" id=11]
 
@@ -21,6 +22,10 @@ towers = [ {
 "cost": 80,
 "name": "Tourelle à Missile",
 "scene": ExtResource( 3 )
+}, {
+"cost": 50,
+"name": "Mine",
+"scene": ExtResource( 9 )
 }, {
 "cost": 500,
 "name": "Ultra tourelle",
