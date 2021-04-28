@@ -20,5 +20,6 @@ func _ready():
 	
 func take_damage(amount):
 	hitpoints -= amount
+	$HealthDisplay.update_healthbar(hitpoints)
 	if (hitpoints <= 0):
 		get_node("..").remove_entity(self)

@@ -1,18 +1,20 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://sprites/M484VerticalShmupSet1-29x29.png" type="Texture" id=2]
-[ext_resource path="res://entities/Projectiles/Bullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/Projectiles/Missile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Shooter.gd" type="Script" id=4]
+[ext_resource path="res://HealthBar.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.9635, 7.38137 )
 
 [node name="Enemy" type="Area2D"]
-collision_layer = 4
-collision_mask = 0
+collision_layer = 2147483652
+collision_mask = 2
 script = ExtResource( 1 )
 speed = 35.0
+hitpoints = 100.0
 dijkstra = "avoid_range_go_to_base"
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -30,5 +32,8 @@ collision_layer = 0
 collision_mask = 10
 script = ExtResource( 4 )
 attack_range = 150.0
-attack_speed = 3.0
+attack_speed = 0.5
 projectile = ExtResource( 3 )
+
+[node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10.1096, 5.21491 )

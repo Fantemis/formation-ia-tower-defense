@@ -1,20 +1,22 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://sprites/M484VerticalShmupSet1-29x29.png" type="Texture" id=1]
+[ext_resource path="res://sprites/heal_sprite.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Projectile.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4.42316, 4.30295 )
+extents = Vector2( 154.601, 155.898 )
 
-[node name="Missile" type="Area2D"]
+[node name="Bullet" type="Area2D"]
+scale = Vector2( 0.04, 0.04 )
 script = ExtResource( 2 )
-speed = 55.0
+damage = -50.0
+speed = 150.0
 duration = 10.0
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 833, 162, 9, 8 )
+region_rect = Rect2( 149, 146, 308, 310 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
