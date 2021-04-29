@@ -8,7 +8,7 @@
 [ext_resource path="res://sounds/MP5_SMG-GunGuru-703432894.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 29.5006, 28.1533 )
+extents = Vector2( 36.4459, 28.1533 )
 
 [node name="Tank" type="Area2D"]
 collision_layer = 4
@@ -51,14 +51,6 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 470, 130, 22, 23 )
 
-[node name="Sprite6" type="Sprite" parent="."]
-position = Vector2( -9.74092, 64.5283 )
-scale = Vector2( 0.582164, 1.01937 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 616, 311, 88, 4 )
-
 [node name="Sprite8" type="Sprite" parent="."]
 position = Vector2( 7.22965, 33.4156 )
 scale = Vector2( 0.700015, 0.648139 )
@@ -100,7 +92,7 @@ region_enabled = true
 region_rect = Rect2( 221, 98, 25, 23 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 85.1923, 53.2501 )
+position = Vector2( 14.112, 39.9017 )
 shape = SubResource( 1 )
 
 [node name="Shooter" type="Area2D" parent="."]

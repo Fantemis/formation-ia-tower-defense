@@ -5,9 +5,10 @@
 [ext_resource path="res://entities/Projectiles/GigaLaser.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Shooter.gd" type="Script" id=4]
 [ext_resource path="res://HealthBar.tscn" type="PackedScene" id=5]
-[ext_resource path="res://sounds/MP5_SMG-GunGuru-703432894.wav" type="AudioStream" id=6]
+[ext_resource path="res://sounds/laser2.wav" type="AudioStream" id=6]
 
 [node name="Tower" type="Area2D"]
+scale = Vector2( 0.75, 0.75 )
 collision_layer = 2
 collision_mask = 0
 script = ExtResource( 2 )
@@ -16,62 +17,70 @@ tag = "tower"
 max_health = 10000
 
 [node name="Top" type="Sprite" parent="."]
-position = Vector2( 17.0198, -15.6475 )
+position = Vector2( 16.4123, -9.44287 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 2, 157, 29, 29 )
 
 [node name="Top3" type="Sprite" parent="."]
-position = Vector2( 45.8649, 12.8667 )
-scale = Vector2( 1.01536, 1 )
+position = Vector2( 38.0165, 12.4463 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 64, 157, 29, 29 )
 
 [node name="Top2" type="Sprite" parent="."]
-position = Vector2( 17.1344, 40.668 )
+position = Vector2( 16.4337, 33.17 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 126, 157, 29, 29 )
 
 [node name="Top4" type="Sprite" parent="."]
-position = Vector2( 45.9189, -15.7397 )
-scale = Vector2( 1.03072, 1 )
+position = Vector2( 37.737, -9.57122 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 33, 157, 29, 29 )
 
 [node name="Top5" type="Sprite" parent="."]
-position = Vector2( -12.3023, 40.4834 )
+position = Vector2( -4.32138, 33.0869 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 157, 157, 29, 29 )
 
 [node name="Top6" type="Sprite" parent="."]
-position = Vector2( 46.2339, 40.7061 )
+position = Vector2( 37.9651, 33.8388 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 95, 157, 29, 29 )
 
 [node name="Top7" type="Sprite" parent="."]
-position = Vector2( -12.2482, -15.8386 )
+position = Vector2( -4.8285, -8.86252 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 219, 157, 29, 29 )
 
 [node name="Top8" type="Sprite" parent="."]
-position = Vector2( -12.3023, 11.8229 )
+position = Vector2( -4.92891, 12.5712 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 188, 157, 29, 29 )
 
 [node name="Top9" type="Sprite" parent="."]
 position = Vector2( 16.9275, 11.8612 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 652, 132, 29, 29 )
 
 [node name="Shooter" type="Area2D" parent="."]
+scale = Vector2( 0.75, 0.75 )
 collision_layer = 0
 collision_mask = 36
 script = ExtResource( 4 )
@@ -80,8 +89,11 @@ attack_speed = 2.0
 projectile = ExtResource( 3 )
 
 [node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
-position = Vector2( 12.0811, -27.2291 )
+position = Vector2( 6.4688, -17.6882 )
+scale = Vector2( 0.4, 0.4 )
 
 [node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2( 0.75, 0.75 )
 stream = ExtResource( 6 )
-volume_db = -80.0
+volume_db = -24.0
+pitch_scale = 1.94
