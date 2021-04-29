@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://sprites/ambulance_2.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Enemy.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://sprites/ambulance_3.png" type="Texture" id=6]
 [ext_resource path="res://sprites/333.png" type="Texture" id=7]
 [ext_resource path="res://sounds/MP5_SMG-GunGuru-703432894.wav" type="AudioStream" id=8]
+[ext_resource path="res://sprites/shield (2).png" type="Texture" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -30,9 +31,37 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 13.8415, 23.6259 )
 
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="Pew" type="Area2D"]
 position = Vector2( -0.0834312, 0 )
-collision_layer = 32
+collision_layer = 2147483680
 collision_mask = 4
 script = ExtResource( 2 )
 speed = 30.0
@@ -72,3 +101,10 @@ position = Vector2( -17.3209, 9.67244 )
 [node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
 volume_db = -80.0
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( -11.8509, 25.6257 )
+scale = Vector2( 0.65, 0.65 )
+frames = SubResource( 9 )
+speed_scale = 3.0
+playing = true
