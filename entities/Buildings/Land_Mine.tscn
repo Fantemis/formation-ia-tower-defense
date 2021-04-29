@@ -290,6 +290,7 @@ speed_scale = 3.0
 stream = ExtResource( 4 )
 volume_db = -8.0
 pitch_scale = 2.39
+max_distance = 1e+13
 
 [node name="ExplosionShape" type="CollisionShape2D" parent="."]
 modulate = Color( 0.0823529, 0.882353, 0.0941176, 1 )
