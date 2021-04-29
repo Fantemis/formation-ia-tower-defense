@@ -39,28 +39,34 @@ func isHealer():
 	return
 
 func heal():
-	print_debug("heal1")
+	#print_debug("heal1")
 	if get_node("/root/Main").state != "playing": return
 	if target && !overlaps_area(target):
-		print_debug("heal2")
+		#print_debug("heal2")
 		target = null
 	if !target:
-		print_debug("heal3")
+		#print_debug("heal3")
 		var overlapping = get_overlapping_areas()
+		var less_life = 999999999
+		var ennemi_to_heal
 		for obj in overlapping:
-			print_debug("list")
-			print_debug(obj)
-			print_debug(obj.get_node("Shooter"))
+			#print_debug("list")
+			#print_debug(obj)
+			#print_debug(obj.get_node("Shooter"))
 			if obj == parent:
 			#if obj.get_node("Shooter").has_method("isHealer"):
 				continue
 			else:
-				print_debug("heal")
-				print_debug(obj)
-				target = obj
-				break
+				if obj.hitpoints < less_life:
+					less_life = obj.hitpoints
+					ennemi_to_heal = obj
+				#print_debug("heal")
+				#print_debug(obj)
+				#target = obj
+				#break
+		target = ennemi_to_heal
 	if target:
-		print_debug("heal4")
+		#print_debug("heal4")
 		var bullet = projectile.instance()
 		parent.get_node("..").add_child(bullet)
 		bullet.collision_layer = 0
