@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soundscrate-metal-trashcan-lid-pop-1.wav-11a755a93c850b9c9fa10c53fd515507.sample"
+
+[deps]
+
+source_file="res://sounds/soundscrate-metal-trashcan-lid-pop-1.wav"
+dest_files=[ "res://.import/soundscrate-metal-trashcan-lid-pop-1.wav-11a755a93c850b9c9fa10c53fd515507.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
