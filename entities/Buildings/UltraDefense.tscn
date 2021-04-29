@@ -5,7 +5,7 @@
 [ext_resource path="res://entities/Projectiles/UltraLaser.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Shooter.gd" type="Script" id=4]
 [ext_resource path="res://HealthBar.tscn" type="PackedScene" id=5]
-[ext_resource path="res://sounds/MP5_SMG-GunGuru-703432894.wav" type="AudioStream" id=6]
+[ext_resource path="res://sounds/laser1.wav" type="AudioStream" id=6]
 
 [node name="Tower" type="Area2D"]
 collision_layer = 2
@@ -78,8 +78,11 @@ attack_speed = 2.0
 projectile = ExtResource( 3 )
 
 [node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
-position = Vector2( 10.7448, -19.8792 )
+position = Vector2( 10.1149, -14.8395 )
+scale = Vector2( 0.3, 0.3 )
 
 [node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
 stream = ExtResource( 6 )
-volume_db = -80.0
+volume_db = -24.0
+pitch_scale = 1.29
