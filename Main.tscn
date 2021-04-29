@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://maps/Level1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Main.gd" type="Script" id=2]
@@ -8,9 +8,10 @@
 [ext_resource path="res://sprites/barrel.tres" type="Texture" id=6]
 [ext_resource path="res://scripts/MoneyUI.gd" type="Script" id=7]
 [ext_resource path="res://scripts/DebugDrawing.gd" type="Script" id=8]
-[ext_resource path="res://entities/Buildings/Land_Mine.tscn" type="PackedScene" id=9]
 [ext_resource path="res://entities/Buildings/UltraDefense.tscn" type="PackedScene" id=9]
+[ext_resource path="res://entities/Buildings/Land_Mine.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scripts/UI.gd" type="Script" id=11]
+[ext_resource path="res://entities/Buildings/GigaDefense.tscn" type="PackedScene" id=12]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 2 )
@@ -23,13 +24,17 @@ towers = [ {
 "name": "Tourelle à Missile",
 "scene": ExtResource( 3 )
 }, {
-"cost": 50,
-"name": "Mine",
-"scene": ExtResource( 9 )
-}, {
 "cost": 500,
 "name": "Ultra tourelle",
 "scene": ExtResource( 9 )
+}, {
+"cost": 50,
+"name": "Mine",
+"scene": ExtResource( 10 )
+}, {
+"cost": 2500,
+"name": "Giga tourelle",
+"scene": ExtResource( 12 )
 } ]
 map = ExtResource( 1 )
 

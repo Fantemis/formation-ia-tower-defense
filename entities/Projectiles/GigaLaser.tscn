@@ -4,44 +4,52 @@
 [ext_resource path="res://scripts/Projectile.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.77628, 7.12969 )
+extents = Vector2( 21.0114, 19.5698 )
 
 [node name="Missile" type="Area2D"]
 script = ExtResource( 2 )
-damage = 50.0
-speed = 120.0
+damage = 350.0
+speed = 150.0
 duration = 100.0
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 11.4301, 16.1926 )
-scale = Vector2( 0.273041, 0.512832 )
+position = Vector2( 10.929, 9.95683 )
+scale = Vector2( 1.00927, 0.90253 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+region_rect = Rect2( 926, 257, 14, 14 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 11.3467, 19.4497 )
-scale = Vector2( 0.297788, 0.481439 )
+position = Vector2( 10.929, 31.2141 )
+scale = Vector2( 1.00927, 1.03129 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+region_rect = Rect2( 926, 257, 14, 14 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 10.5174, 17.2448 )
+position = Vector2( 2.40746, 19.2153 )
 rotation = 1.57705
-scale = Vector2( 0.192319, 0.547496 )
+scale = Vector2( 1.00927, 1.2771 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+region_rect = Rect2( 947, 257, 14, 14 )
 
 [node name="Sprite4" type="Sprite" parent="."]
-position = Vector2( 13.3024, 17.2066 )
+position = Vector2( 20.0989, 19.6207 )
 rotation = 1.58322
-scale = Vector2( 0.219466, 0.404728 )
+scale = Vector2( 1.00927, 1.21769 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+region_rect = Rect2( 947, 257, 14, 14 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 11.3998, 19.6207 )
+rotation = 1.58322
+scale = Vector2( 1.00927, 1.21769 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 889, 214, 10, 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 11.8057, 17.9267 )
+position = Vector2( 11.1588, 20.6432 )
 shape = SubResource( 1 )

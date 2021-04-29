@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sprites/M484VerticalShmupSet1-29x29.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://entities/Projectiles/GigaLaser.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/Shooter.gd" type="Script" id=4]
+[ext_resource path="res://HealthBar.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 29.5006, 28.1533 )
+
+[node name="Tank" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 2 )
+speed = 40.0
+max_health = 15000
+hitpoints = 15000.0
+dijkstra = "distance_to_base"
+reward = 1000
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 22.7784, 28.0282 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 470, 192, 22, 23 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 4.72043, 14.1155 )
+scale = Vector2( 1, 1.0078 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 470, 161, 22, 23 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( 3.65977, 41.3391 )
+scale = Vector2( 1, 1.0078 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 470, 223, 22, 23 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( -17.5191, 27.4052 )
+scale = Vector2( 1, 1.01937 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 470, 130, 22, 23 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( -9.74092, 64.5283 )
+scale = Vector2( 0.582164, 1.01937 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 616, 311, 88, 4 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 7.22965, 33.4156 )
+scale = Vector2( 0.700015, 0.648139 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 839, 285, 21, 20 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 8.29607, 18.9524 )
+scale = Vector2( 0.63834, 0.581723 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 159, 98, 25, 23 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 7.58896, 46.1761 )
+scale = Vector2( 0.63834, 0.581723 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 159, 98, 25, 23 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 26.3579, 31.9307 )
+scale = Vector2( 0.606694, 0.591979 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 221, 98, 25, 23 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -13.9778, 31.3268 )
+scale = Vector2( 0.63834, 0.581723 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 221, 98, 25, 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 85.1923, 53.2501 )
+shape = SubResource( 1 )
+
+[node name="Shooter" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 10
+script = ExtResource( 4 )
+attack_speed = 5.0
+projectile = ExtResource( 3 )
+
+[node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10.507, 18.5047 )

@@ -10,7 +10,7 @@ collision_mask = 0
 script = ExtResource( 2 )
 width = 8
 height = 8
-hitpoints = 100.0
+hitpoints = 4000.0
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

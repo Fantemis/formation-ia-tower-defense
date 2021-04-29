@@ -10,7 +10,7 @@
 collision_layer = 2
 collision_mask = 0
 script = ExtResource( 2 )
-hitpoints = 150.0
+hitpoints = 300.0
 tag = "tower"
 max_health = 150
 

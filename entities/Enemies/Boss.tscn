@@ -14,8 +14,8 @@ collision_layer = 4
 collision_mask = 2
 script = ExtResource( 2 )
 speed = 40.0
-max_health = 20000
-hitpoints = 20000.0
+max_health = 5000
+hitpoints = 5000.0
 dijkstra = "distance_to_base"
 reward = 1000
 
@@ -64,7 +64,7 @@ shape = SubResource( 1 )
 
 [node name="Shooter" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 2147483658
+collision_mask = 10
 script = ExtResource( 4 )
 attack_speed = 5.0
 projectile = ExtResource( 3 )

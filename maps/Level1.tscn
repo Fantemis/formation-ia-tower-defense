@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://entities/Buildings/Base.tscn" type="PackedScene" id=1]
-[ext_resource path="res://entities/Enemies/ArmoredCar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/Enemies/ArmorredCar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/Enemies/Tank.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entities/Enemies/Healer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://sprites/shmup29x29.tres" type="TileSet" id=5]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scripts/TileMapLookup.gd" type="Script" id=8]
 [ext_resource path="res://entities/Enemies/SpeedyGonzales.tscn" type="PackedScene" id=9]
 [ext_resource path="res://entities/Enemies/Boss.tscn" type="PackedScene" id=10]
+[ext_resource path="res://entities/Enemies/Boss2.tscn" type="PackedScene" id=11]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 7 )
@@ -42,16 +43,28 @@ tag = "base"
 position = Vector2( 116, 696 )
 script = ExtResource( 6 )
 waves = [ {
-"enemies": [ ExtResource( 9 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ) ],
+"enemies": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ) ],
 "wait": 5.0
 }, {
 "enemies": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
 "wait": 10.0
 }, {
-"enemies": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
+"enemies": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ],
 "wait": 10.0
 }, {
 "enemies": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 9 ) ],
 "wait": 15
+}, {
+"enemies": [ ExtResource( 10 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ) ],
+"wait": 15
+}, {
+"enemies": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"wait": 10
+}, {
+"enemies": [ ExtResource( 10 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"wait": 15
+}, {
+"enemies": [ ExtResource( 11 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 11 ) ],
+"wait": 25
 } ]
 interval = 1.0
