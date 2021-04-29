@@ -44,6 +44,7 @@ reward = 60
 position = Vector2( -11.4269, 30.1802 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
