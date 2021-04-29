@@ -13,35 +13,35 @@ speed = 120.0
 duration = 100.0
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 11.4301, 16.1926 )
-scale = Vector2( 0.273041, 0.512832 )
+position = Vector2( 9.76791, 15.7946 )
+scale = Vector2( 0.84271, 0.778157 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+region_rect = Rect2( 949, 163, 6, 6 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 11.3467, 19.4497 )
-scale = Vector2( 0.297788, 0.481439 )
+position = Vector2( 12.2363, 12.0284 )
+scale = Vector2( 0.781617, 0.880403 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+region_rect = Rect2( 949, 163, 6, 6 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 10.5174, 17.2448 )
+position = Vector2( 12.3052, 19.3586 )
 rotation = 1.57705
-scale = Vector2( 0.192319, 0.547496 )
+scale = Vector2( 0.778135, 0.740391 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+region_rect = Rect2( 949, 163, 6, 6 )
 
 [node name="Sprite4" type="Sprite" parent="."]
-position = Vector2( 13.3024, 17.2066 )
+position = Vector2( 14.3941, 15.8094 )
 rotation = 1.58322
-scale = Vector2( 0.219466, 0.404728 )
+scale = Vector2( 0.723355, 0.898605 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 905.574, 157.685, 18.9127, 16.7512 )
+region_rect = Rect2( 949, 163, 6, 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 11.8057, 17.9267 )
+position = Vector2( 36.8087, 17.4117 )
 shape = SubResource( 1 )
