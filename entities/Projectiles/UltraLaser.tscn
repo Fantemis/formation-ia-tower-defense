@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/Projectile.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.77628, 7.12969 )
+extents = Vector2( 5.25905, 6.3142 )
 
 [node name="Missile" type="Area2D"]
 script = ExtResource( 2 )
@@ -43,5 +43,5 @@ region_enabled = true
 region_rect = Rect2( 949, 163, 6, 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 36.8087, 17.4117 )
+position = Vector2( 12.296, 15.4739 )
 shape = SubResource( 1 )

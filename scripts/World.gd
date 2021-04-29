@@ -2,7 +2,7 @@ extends Node2D
 
 export (int) var width = 64
 export (int) var height = 64
-export (int) var starting_money = 200
+export (int) var starting_money = 50000
 export var movement_costs = {}
 export (float) var tower_cost = 10
 var entities = []

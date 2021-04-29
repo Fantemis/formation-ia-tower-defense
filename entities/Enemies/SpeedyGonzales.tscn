@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://sprites/M484VerticalShmupSet1-29x29.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Enemy.gd" type="Script" id=2]
 [ext_resource path="res://entities/Projectiles/Bullet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Shooter.gd" type="Script" id=4]
 [ext_resource path="res://HealthBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sounds/MP5_SMG-GunGuru-703432894.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 13.8281, 12.8231 )
@@ -38,3 +39,7 @@ projectile = ExtResource( 3 )
 
 [node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2.67572, 3.27031 )
+
+[node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -80.0

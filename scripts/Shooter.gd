@@ -6,6 +6,7 @@ export (float) var attack_speed = 1
 export (PackedScene) var projectile
 var target
 var parent
+var shooting = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,6 +38,7 @@ func shoot():
 				target = obj
 				break
 	if target:
+		$"../ShootingSound".play()
 		var bullet = projectile.instance()
 		# ajouter une var parent 
 		# parent = shooter
@@ -44,5 +46,5 @@ func shoot():
 		parent.get_node("..").add_child(bullet)
 		bullet.collision_layer = 0
 		bullet.collision_mask = collision_mask
-		bullet.position = parent.position
+		bullet.position = parent.position + position
 		bullet.fire((target.position - parent.position).normalized())

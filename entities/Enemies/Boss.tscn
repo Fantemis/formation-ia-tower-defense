@@ -1,13 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://sprites/M484VerticalShmupSet1-29x29.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Enemy.gd" type="Script" id=2]
 [ext_resource path="res://entities/Projectiles/UltraLaser.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Shooter.gd" type="Script" id=4]
 [ext_resource path="res://HealthBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sounds/MP5_SMG-GunGuru-703432894.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 28.9471, 23.41 )
+extents = Vector2( 26.2216, 20.9386 )
 
 [node name="Tank" type="Area2D"]
 collision_layer = 4
@@ -20,7 +21,7 @@ dijkstra = "distance_to_base"
 reward = 1000
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 12.9229, 11.4246 )
+position = Vector2( 25.8458, 1.311 )
 scale = Vector2( 0.606694, 0.591979 )
 texture = ExtResource( 1 )
 centered = false
@@ -28,7 +29,7 @@ region_enabled = true
 region_rect = Rect2( 33.088, 251.012, 30.252, 28.3612 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( -3.37119, 10.1136 )
+position = Vector2( 9.55171, 9.53674e-07 )
 scale = Vector2( 0.63834, 0.581723 )
 texture = ExtResource( 1 )
 centered = false
@@ -36,14 +37,14 @@ region_enabled = true
 region_rect = Rect2( -0.315216, 247.86, 29.6217, 30.8822 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 8.98982, 23.7856 )
+position = Vector2( 21.9127, 13.672 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 62.9162, 280.448, 29.6807, 29.9581 )
 
 [node name="Sprite4" type="Sprite" parent="."]
-position = Vector2( -0.936424, 24.7221 )
+position = Vector2( 11.9865, 14.6085 )
 scale = Vector2( 1, 1.0078 )
 texture = ExtResource( 1 )
 centered = false
@@ -51,7 +52,7 @@ region_enabled = true
 region_rect = Rect2( 32.4033, 281.003, 29.6807, 28.5711 )
 
 [node name="Sprite5" type="Sprite" parent="."]
-position = Vector2( -12.9229, 25.2839 )
+position = Vector2( 0, 15.1703 )
 scale = Vector2( 1, 1.01937 )
 texture = ExtResource( 1 )
 centered = false
@@ -59,10 +60,19 @@ region_enabled = true
 region_rect = Rect2( 94.2612, 282.389, 30.2355, 29.1259 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 10.9461, 33.0976 )
+position = Vector2( 25.8458, 22.4813 )
 shape = SubResource( 1 )
 
 [node name="Shooter" type="Area2D" parent="."]
+position = Vector2( 20.3393, 10.4399 )
+collision_layer = 0
+collision_mask = 10
+script = ExtResource( 4 )
+attack_speed = 5.0
+projectile = ExtResource( 3 )
+
+[node name="Shooter2" type="Area2D" parent="."]
+position = Vector2( 34.9904, 10.4399 )
 collision_layer = 0
 collision_mask = 10
 script = ExtResource( 4 )
@@ -70,4 +80,9 @@ attack_speed = 5.0
 projectile = ExtResource( 3 )
 
 [node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
-position = Vector2( 9.79989, 4.00904 )
+position = Vector2( 21.9127, 4.8559 )
+
+[node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 30, 24.5277 )
+stream = ExtResource( 6 )
+volume_db = -80.0
