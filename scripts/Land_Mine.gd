@@ -37,8 +37,8 @@ func _on_hit(other):
 			$"AnimatedSprite".show()
 			$"AnimatedSprite".play()
 			$"AnimatedSprite".connect("animation_finished", self, "endAnimation")
-			other.take_damage(500)	
+			other.take_damage(200)	
 		else:
-			other.take_damage(500)		
+			other.take_damage(200)		
 
 			

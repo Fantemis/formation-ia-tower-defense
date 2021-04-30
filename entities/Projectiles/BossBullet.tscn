@@ -51,15 +51,15 @@ speed = 200.0
 duration = 5.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 4.78858, 1.9814e-14 )
+position = Vector2( -20.7295, 23.0173 )
 rotation = 1.5708
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 7 )
-frame = 3
 speed_scale = 2.0
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -4.80345, 1.73239 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
