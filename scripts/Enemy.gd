@@ -21,7 +21,11 @@ func _process(delta):
 			distance = position.distance_to(destination)
 		var tile_map = world.tile_map
 		var tile_pos = tile_map.world_to_map(position)
-		var move_amount = delta * speed / world.get_cost(tile_pos)
+		var move_amount = 0
+		if (get_collision_layer_bit(4)) :
+			move_amount = delta * speed / world.get_fly_cost(tile_pos)
+		else:
+			move_amount = delta * speed / world.get_cost(tile_pos)
 		if (distance < move_amount):
 			destination = tile_map.map_to_world(world.dijkstra[dijkstra].get_next(tile_pos))
 		position = position.move_toward(destination, move_amount)

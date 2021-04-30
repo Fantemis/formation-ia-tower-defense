@@ -199,5 +199,6 @@ volume_db = -80.0
 position = Vector2( 26.0002, 29.8287 )
 scale = Vector2( 1.2, 1.2 )
 frames = SubResource( 31 )
+frame = 11
 speed_scale = 2.0
 playing = true
