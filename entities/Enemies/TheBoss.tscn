@@ -171,7 +171,7 @@ script = ExtResource( 2 )
 speed = 60.0
 max_health = 666
 hitpoints = 666.0
-dijkstra = "avoid_range_go_to_base"
+dijkstra = "distance_to_base"
 reward = 80
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -197,6 +197,6 @@ volume_db = -80.0
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 26.0002, 30.0787 )
 frames = SubResource( 31 )
-frame = 11
+frame = 1
 speed_scale = 2.0
 playing = true
