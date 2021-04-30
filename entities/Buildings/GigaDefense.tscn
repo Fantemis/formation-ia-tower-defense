@@ -10,7 +10,7 @@
 [node name="Tower" type="Area2D"]
 scale = Vector2( 0.75, 0.75 )
 collision_layer = 2
-collision_mask = 20
+collision_mask = 0
 script = ExtResource( 2 )
 hitpoints = 10000.0
 tag = "tower"
@@ -82,7 +82,7 @@ region_rect = Rect2( 652, 132, 29, 29 )
 [node name="Shooter" type="Area2D" parent="."]
 scale = Vector2( 0.75, 0.75 )
 collision_layer = 0
-collision_mask = 52
+collision_mask = 36
 script = ExtResource( 4 )
 attack_range = 300.0
 attack_speed = 2.0

@@ -184,6 +184,7 @@ collision_layer = 0
 collision_mask = 10
 script = ExtResource( 4 )
 attack_speed = 0.75
+attack_range = 450.0
 projectile = ExtResource( 3 )
 
 [node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
