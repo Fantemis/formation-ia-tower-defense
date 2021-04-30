@@ -370,8 +370,8 @@ animations = [ {
 extents = Vector2( 21.0147, 12.8231 )
 
 [node name="Tank" type="Area2D"]
-collision_layer = 4
-collision_mask = 10
+collision_layer = 16
+collision_mask = 8
 script = ExtResource( 2 )
 speed = 60.0
 max_health = 600
@@ -384,7 +384,7 @@ position = Vector2( 12.0922, 23.3637 )
 rotation = 3.14159
 scale = Vector2( 0.08, 0.08 )
 frames = SubResource( 71 )
-frame = 8
+frame = 66
 speed_scale = 20.0
 playing = true
 
@@ -393,7 +393,7 @@ position = Vector2( 20.3565, 23.3195 )
 rotation = 3.14159
 scale = Vector2( 0.08, 0.08 )
 frames = SubResource( 71 )
-frame = 7
+frame = 65
 speed_scale = 20.0
 playing = true
 
