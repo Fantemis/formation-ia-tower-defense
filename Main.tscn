@@ -28,7 +28,7 @@ towers = [ {
 "name": "Ultra tourelle",
 "scene": ExtResource( 9 )
 }, {
-"cost": 60,
+"cost": 50,
 "name": "Mine",
 "scene": ExtResource( 10 )
 }, {

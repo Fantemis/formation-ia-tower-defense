@@ -367,7 +367,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=72]
-extents = Vector2( 21.0147, 12.8231 )
+extents = Vector2( 14, 18 )
 
 [node name="Tank" type="Area2D"]
 collision_layer = 16
@@ -384,7 +384,7 @@ position = Vector2( 12.0922, 23.3637 )
 rotation = 3.14159
 scale = Vector2( 0.08, 0.08 )
 frames = SubResource( 71 )
-frame = 66
+frame = 17
 speed_scale = 20.0
 playing = true
 
@@ -393,7 +393,7 @@ position = Vector2( 20.3565, 23.3195 )
 rotation = 3.14159
 scale = Vector2( 0.08, 0.08 )
 frames = SubResource( 71 )
-frame = 65
+frame = 16
 speed_scale = 20.0
 playing = true
 
@@ -404,7 +404,7 @@ region_enabled = true
 region_rect = Rect2( 878, 255, 32, 18 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 15, 10.434 )
+position = Vector2( 116, 0 )
 shape = SubResource( 72 )
 
 [node name="Shooter" type="Area2D" parent="."]

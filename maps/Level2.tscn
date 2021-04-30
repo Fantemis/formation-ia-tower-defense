@@ -19,12 +19,6 @@ movement_costs = {
 "grass": 2.0,
 "road": 1.0
 }
-movement_costs_fly = {
-"grass": 1,
-"road": 1,
-"tree": 3,
-"water": 1
-}
 tower_cost = 20.0
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -48,7 +42,28 @@ tag = "base"
 position = Vector2( 116, 696 )
 script = ExtResource( 6 )
 waves = [ {
+"enemies": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ) ],
+"wait": 5.0
+}, {
+"enemies": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
+"wait": 10.0
+}, {
+"enemies": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ) ],
+"wait": 10.0
+}, {
+"enemies": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ) ],
+"wait": 15
+}, {
+"enemies": [ ExtResource( 10 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ) ],
+"wait": 15
+}, {
+"enemies": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"wait": 15
+}, {
+"enemies": [ ExtResource( 10 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"wait": 15
+}, {
 "enemies": [ ExtResource( 11 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 11 ) ],
-"wait": 5
+"wait": 25
 } ]
 interval = 1.0
