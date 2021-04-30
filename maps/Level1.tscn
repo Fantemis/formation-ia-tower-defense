@@ -19,12 +19,6 @@ movement_costs = {
 "grass": 2.0,
 "road": 1.0
 }
-movement_costs_fly = {
-"grass": 1,
-"road": 1,
-"tree": 3,
-"water": 1
-}
 tower_cost = 20.0
 
 [node name="TileMap" type="TileMap" parent="."]
