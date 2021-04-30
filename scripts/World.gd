@@ -4,6 +4,7 @@ export (int) var width = 64
 export (int) var height = 64
 export (int) var starting_money = 50000
 export var movement_costs = {}
+export var movement_costs_fly = {}
 export (float) var tower_cost = 10
 var entities = []
 var tile_map
@@ -25,6 +26,16 @@ func get_cost(pos):
 	elif movement_costs.has(group): return movement_costs[group]
 	# sinon le coût par défaut c'est 1
 	return 1
+	
+# retourner le coût de déplacement d'une case pour les unite volante
+func get_fly_cost(pos):
+	var group = tile_map.get_group(pos)
+	# les cases eau et arbre ne peuvent pas être traversées
+	# si on a renseigné un coût pour ce type de terrain, on l'applique ici
+	if movement_costs_fly.has(group): return movement_costs_fly[group]
+	# sinon le coût par défaut c'est 1
+	return 1
+
 
 # _ready est une fonction Godot qui sera invoquée à la création de l'objet
 func _ready():
@@ -50,8 +61,16 @@ func _ready():
 		graphs['range_cost'].append([])
 		graphs['range_cost'][x].resize(height)
 		for y in range(height):
-			graphs['range_cost'][x][y] = get_cost(Vector2(x, y))
-		
+			graphs['range_cost'][x][y] = get_fly_cost(Vector2(x, y))
+			
+	# initialiser la grille des coûts modifiée par les tours	
+	graphs['fly_cost'] = []
+	for x in range(width):
+		graphs['fly_cost'].append([])
+		graphs['fly_cost'][x].resize(height)
+		for y in range(height):
+			graphs['fly_cost'][x][y] = get_fly_cost(Vector2(x, y))
+
 	# il faut ajouter la base aux entités gérées par ce script	
 	var base = get_node("Base")
 	add_entity(base, base.position)
@@ -69,7 +88,7 @@ func add_shooter_cost(pos, attack_range):
 				var map_y = pos.y + y * quadrant.y
 				if map_x < 0 || map_x >= width || map_y < 0 || map_y >= height: continue
 				if graphs['range_cost'][map_x][map_y] == null: continue
-				graphs['range_cost'][map_x][map_y] = max(graphs['range_cost'][map_x][map_y], get_cost(Vector2(map_x, map_y)) + tower_cost)
+				graphs['range_cost'][map_x][map_y] = max(graphs['range_cost'][map_x][map_y], get_fly_cost(Vector2(map_x, map_y)) + tower_cost)
 				
 func reset_shooter_cost(pos, attack_range):
 	var tile_range = ceil(attack_range / tile_map.cell_size.x)
@@ -110,6 +129,7 @@ func add_entity(entity, pos):
 		if tilemap_entity.tag:
 			if !entity_lookups.has(tilemap_entity.tag): entity_lookups[tilemap_entity.tag] = []
 			if !dijkstra.has('distance_to_%s' % tilemap_entity.tag): dijkstra['distance_to_%s' % tilemap_entity.tag] = DijkstraMap.new(entity_lookups[tilemap_entity.tag], graphs['cost'])
+			if !dijkstra.has('fly_to_%s' % tilemap_entity.tag): dijkstra['fly_to_%s' % tilemap_entity.tag] = DijkstraMap.new(entity_lookups[tilemap_entity.tag], graphs['fly_cost'])
 			if !dijkstra.has('avoid_range_go_to_%s' % tilemap_entity.tag): dijkstra['avoid_range_go_to_%s' % tilemap_entity.tag] = DijkstraMap.new(entity_lookups[tilemap_entity.tag], graphs['range_cost'])	
 	else: entity_positions.append(tile_pos)
 	
