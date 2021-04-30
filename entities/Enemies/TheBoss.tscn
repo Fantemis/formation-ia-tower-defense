@@ -169,8 +169,8 @@ collision_layer = 4
 collision_mask = 10
 script = ExtResource( 2 )
 speed = 60.0
-max_health = 666
-hitpoints = 666.0
+max_health = 6666
+hitpoints = 6666.0
 dijkstra = "distance_to_base"
 reward = 80
 
@@ -184,7 +184,6 @@ collision_layer = 0
 collision_mask = 10
 script = ExtResource( 4 )
 attack_range = 450.0
-attack_speed = 1.0
 projectile = ExtResource( 3 )
 
 [node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
@@ -198,6 +197,6 @@ volume_db = -80.0
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 26.0002, 30.0787 )
 frames = SubResource( 31 )
-frame = 8
+frame = 19
 speed_scale = 2.0
 playing = true
