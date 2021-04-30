@@ -261,6 +261,7 @@ position = Vector2( -16.3256, -8.95667 )
 collision_layer = 2
 collision_mask = 36
 script = ExtResource( 2 )
+max_health = 99999
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 4.77297, -2.27207 )
@@ -284,12 +285,14 @@ position = Vector2( 16.2968, 8.82156 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 48 )
 animation = "New Anim"
+frame = 16
 speed_scale = 3.0
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 volume_db = -8.0
 pitch_scale = 2.39
+max_distance = 1e+13
 
 [node name="ExplosionShape" type="CollisionShape2D" parent="."]
 modulate = Color( 0.0823529, 0.882353, 0.0941176, 1 )

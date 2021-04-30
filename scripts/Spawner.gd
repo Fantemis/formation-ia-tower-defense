@@ -8,6 +8,7 @@ var spawn_index = 0
 var wave_timer: Timer
 var spawn_timer: Timer
 var world: Node
+var played = 0
 
 func _ready():
 	if !waves.size():
@@ -37,8 +38,17 @@ func _on_wave_timer():
 	spawn_timer.start(interval)
 	print_debug("Wave %s!" % (wave_index + 1))
 	
+func playSound():
+	$"BossSound".stop()
+	
 func _on_spawn_timer():
 	var enemy = waves[wave_index].enemies[spawn_index].instance()
+	if enemy.hitpoints == 666:
+		$"BossSound".play()
+		var timer = Timer.new()
+		timer.one_shot = true
+		timer.connect("timeout", self, "playSound")
+		timer.start(5)
 	world.add_enemy(enemy)
 	enemy.position = position
 	enemy.z_index = position.y
