@@ -92,7 +92,7 @@ region_enabled = true
 region_rect = Rect2( 221, 98, 25, 23 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 14.112, 39.9017 )
+position = Vector2( 10.4412, 38.2331 )
 shape = SubResource( 1 )
 
 [node name="Shooter" type="Area2D" parent="."]
